@@ -1,0 +1,32 @@
+/* src/components/UnderstandingDataStructures.css */
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 20px;
+  }
+  
+  .article-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #0c5099; /* Bootstrap primary color */
+    margin-top: 1.5rem;
+  }
+  
+  .article-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #495057; /* Dark gray for better readability */
+    margin-bottom: 1.5rem; /* Space between paragraphs */
+  }
+  
+  .article-list {
+    margin-left: 20px; /* Indentation for list items */
+    margin-bottom: 1.5rem; /* Space below the list */
+  }
+  
+  .container {
+    padding: 0 15px; /* Ensures proper padding on container */
+  }
+  

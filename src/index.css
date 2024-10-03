@@ -9,6 +9,9 @@
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #f8f9fa;
+
+    padding-top: 70px; 
+  
 }
 
 a {
@@ -42,10 +45,43 @@ img {
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: bold;
+  margin-left: 1rem;
+  margin-right: 1.5rem;  /* Space between logo and label */
 }
+
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  margin: 0 1rem; 
+}
+
+.ml-auto {
+  margin-left: auto; 
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+/* New styles for button spacing */
+.ml-auto button {
+  margin-left: 1rem; /* Space between Sign In and Register buttons */
+}
+
+.ml-auto button:last-child {
+  margin-right: 2rem; /* More space to the right of the Register button */
+}
+
+/* Additional space for the logo */
+.navbar-brand img {
+  margin-right: 1rem; /* Space between the logo and the name */
+}
+
 
 button {
   font-size: 1rem;
+  padding: 0.5rem 1rem;
+
 }
 
 footer {
@@ -60,16 +96,41 @@ footer p {
   color: #aaa;
 }
 
+footer nav a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+footer nav a:hover {
+  color: #ddd;  
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 600px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+
 /* Scrollbar styling (optional) */
 body::-webkit-scrollbar {
   width: 8px;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #007bff;
+  background-color: #809ab8;
   border-radius: 10px;
 }
 
 body::-webkit-scrollbar-track {
-  background-color: #f8f9fa;
+  background-color: #1d3d5d;
 }
