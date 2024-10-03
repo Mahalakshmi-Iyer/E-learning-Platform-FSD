@@ -1,75 +1,132 @@
-/* index.css - Global Resets and Styling */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Color Palette */
+:root {
+  --primary-dark: #03045E;  /* Dark Navy Blue */
+  --primary: #0077B6;       /* Strong Blue */
+  --secondary: #00B4D8;     /* Light Blue */
+  --accent-light: #90E0EF;  /* Very Light Blue */
+  --accent-lighter: #CAF0F8; /* Pale Blue */
+  --light-grey: #f5f5f5;    /* Light Grey */
+  --dark-grey: #4d4d4d;     /* Dark Grey */
+  --white: #ffffff;         /* Pure White */
 }
 
+/* Body */
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f8f9fa;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--accent-lighter);
+  color: var(--dark-grey);
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+/* Navbar */
+.navbar {
+  background-color: var(--primary-dark);
+  color: var(--white);
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+.navbar a {
+  color: var(--white);
+  margin-right: 20px;
 }
 
+.navbar a:hover {
+  color: var(--accent-light);
+}
+
+/* Hero Section */
+.hero-section {
+  background-color: var(--white);
+  text-align: center;
+  padding: 50px 0;
+}
+
+.hero-section h1 {
+  color: var(--primary-dark);
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  color: var(--primary);
+  font-size: 1.25rem;
+}
+
+/* Course Section */
+.courses-section {
+  background-color: var(--light-grey);
+  padding: 50px 20px;
+}
+
+.courses-section h2 {
+  color: var(--primary-dark);
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Course Boxes */
+.course-box {
+  background-color: var(--accent-light);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.course-box h3 {
+  color: var(--primary-dark);
+  font-size: 1.5rem;
+}
+
+.course-box p {
+  color: var(--dark-grey);
+}
+
+.course-box button {
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.course-box button:hover {
+  background-color: var(--secondary);
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--dark-grey);
+  padding: 20px;
+  color: var(--white);
+  text-align: center;
+}
+
+.footer a {
+  color: var(--white);
+}
+
+.footer a:hover {
+  color: var(--accent-light);
+}
+
+/* Utility */
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .text-center {
   text-align: center;
 }
 
-.mt-5 {
-  margin-top: 3rem;
-}
-
-.mb-5 {
-  margin-bottom: 3rem;
-}
-
-/* Navbar specific styling */
-.navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-button {
-  font-size: 1rem;
-}
-
-footer {
-  background-color: #1a1a1a;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-footer p {
-  font-size: 0.9rem;
-  color: #aaa;
-}
-
-/* Scrollbar styling (optional) */
-body::-webkit-scrollbar {
-  width: 8px;
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: #007bff;
-  border-radius: 10px;
-}
-
-body::-webkit-scrollbar-track {
-  background-color: #f8f9fa;
+.mt-20 {
+  margin-top: 20px;
 }

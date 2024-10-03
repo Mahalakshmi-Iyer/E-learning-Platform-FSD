@@ -1,26 +1,41 @@
 // src/components/Navbar.js
 import React from 'react';
-import { Navbar, Nav, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import '../styles/Navbar.css';
 
-const Navigation = () => {
+function Navbar() {
   return (
-    <Navbar bg="primary" variant="dark" expand="lg">
-      <Navbar.Brand href="#home">TechOverflow</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#courses">Courses</Nav.Link>
-          <Nav.Link href="#articles">Articles</Nav.Link>
-          <Nav.Link href="#quizzes">Quizzes</Nav.Link>
-          <Nav.Link href="#about">About</Nav.Link>
-          <Nav.Link href="#contact">Contact</Nav.Link>
-        </Nav>
-        <Button variant="outline-light" className="mr-2">Sign In</Button>
-        <Button variant="light">Register</Button>
-      </Navbar.Collapse>
-    </Navbar>
+    <nav className="navbar">
+      <div className="navbar-logo">
+        <img src="Logo.ico" alt="Logo" /> 
+        <h1>TechOverflow</h1>
+      </div>
+      <div className="navbar-collapse">
+        <ul className="nav-links">
+          <li className="nav-item">
+            <Link className="nav-link" to="/">Home</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/courses">Courses</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/about">About</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/contact">Contact</Link>
+          </li>
+        </ul>
+        <div className="auth-buttons">
+          <Link to="/register">
+            <button>Register</button>
+          </Link>
+          <Link to="/login">
+            <button>Login</button>
+          </Link>
+        </div>
+      </div>
+    </nav>
   );
-};
+}
 
-export default Navigation;
+export default Navbar;

@@ -1,0 +1,73 @@
+/* Navbar styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #0077B6; /* Background color for navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  }
+  
+  .navbar-logo {
+    margin-left: 
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-logo img {
+    max-width: 50px; /* Adjust logo size */
+    margin-right: 10px; /* Space between logo and site name */
+  }
+  
+  .navbar-logo h1 {
+    font-size: 1.8rem; /* Site name font size */
+    color: white; /* Site name color */
+    margin: 0; /* Remove margin */
+  }
+  
+  .navbar-collapse {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-links {
+    list-style: none; /* Remove default list styling */
+    display: flex;
+    gap: 20px; /* Space between nav items */
+    margin: 0; /* Remove default margin */
+  }
+  
+  .nav-item {
+    position: relative; /* Position for pseudo-elements */
+  }
+  
+  .nav-link {
+    color: white; /* Nav link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem; /* Font size for links */
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  .nav-link:hover {
+    color: #90E0EF; /* Lighter blue on hover */
+  }
+  
+  .auth-buttons {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+  }
+  
+  .auth-buttons button {
+    background-color: #00B4D8; /* Button color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+  }
+  
+  .auth-buttons button:hover {
+    background-color: #02C39A; /* Lighter green on hover */
+  }
+  

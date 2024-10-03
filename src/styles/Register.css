@@ -1,0 +1,66 @@
+/* Signup form styling */
+.signup-container {
+    background-color: #CAF0F8;
+    padding: 50px;
+    max-width: 600px;
+    margin: 80px auto;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.signup-left {
+    flex: 1;
+    padding-right: 30px;
+}
+
+.signup-left h2 {
+    color: #03045E;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.signup-left p {
+    font-size: 1rem;
+    color: #0077B6;
+}
+
+.signup-left .subscribe-box {
+    margin-top: 20px;
+}
+
+.signup-left .subscribe-input {
+    padding: 10px;
+    border: 2px solid #90E0EF;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.signup-right {
+    flex: 1;
+}
+
+.signup-right .form-group {
+    margin-bottom: 20px;
+}
+
+.signup-right .form-control {
+    padding: 15px;
+    font-size: 1.1rem;
+    border: 2px solid #90E0EF;
+    border-radius: 5px;
+}
+
+.signup-right .btn-primary {
+    background-color: #0077B6;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.signup-right .btn-primary:hover {
+    background-color: #03045E;
+}
