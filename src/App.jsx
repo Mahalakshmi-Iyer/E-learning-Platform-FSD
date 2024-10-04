@@ -7,6 +7,11 @@ import PythonCourse from './components/PythonCourse'; // Import the new Python c
 import ReactCourse from './components/ReactCourse';
 import ArticlesPage from './components/ArticlesPage'; // Import the Articles page
 import UnderstandingDataStructures from './components/UnderstandingDataStructures';
+import QuizzesPage from './components/QuizzesPage';
+import PythonQuiz from './components/PythonQuiz';
+import Footer from './components/Footer';
+
+
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
 function App() {
@@ -90,7 +95,11 @@ function App() {
         <Route path="/courses/react" element={<ReactCourse />} />
         <Route path="/articles" element={<ArticlesPage />} /> 
         <Route path="/articles/data-structures" element={<UnderstandingDataStructures />} />
+        <Route path="/quizzes" element={<QuizzesPage />} /> 
+        <Route path="/quizzes/python" element={<PythonQuiz />} /> 
+
       </Routes>
+      <Footer />
     </Router>
   );
 }

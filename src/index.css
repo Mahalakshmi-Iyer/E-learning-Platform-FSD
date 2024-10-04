@@ -41,13 +41,18 @@ img {
   margin-bottom: 3rem;
 }
 
-/* Navbar specific styling */
+
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: bold;
   margin-left: 1rem;
-  margin-right: 1.5rem;  /* Space between logo and label */
+  margin-right: 1.5rem; 
 }
+
+/* .navbar{
+  background-color: #03045E;
+  color: white;
+} */
 
 .navbar-nav .nav-link {
   font-size: 1rem;
@@ -63,18 +68,18 @@ img {
   margin-right: auto; 
 }
 
-/* New styles for button spacing */
+
 .ml-auto button {
-  margin-left: 1rem; /* Space between Sign In and Register buttons */
+  margin-left: 1rem; 
 }
 
 .ml-auto button:last-child {
-  margin-right: 2rem; /* More space to the right of the Register button */
+  margin-right: 2rem; 
 }
 
-/* Additional space for the logo */
+
 .navbar-brand img {
-  margin-right: 1rem; /* Space between the logo and the name */
+  margin-right: 1rem; 
 }
 
 
@@ -120,8 +125,6 @@ footer nav a:hover {
   }
 }
 
-
-/* Scrollbar styling (optional) */
 body::-webkit-scrollbar {
   width: 8px;
 }

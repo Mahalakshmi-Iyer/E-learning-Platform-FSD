@@ -1,10 +1,10 @@
 import React from 'react';
 import { Navbar, Nav, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { Link } from 'react-router-dom'; 
 
 const Navigation = () => {
   return (
-    <Navbar bg="primary" variant="dark" expand="lg" fixed="top" > 
+    <Navbar bg="primary" variant="dark" expand="lg" fixed="top"> 
       <Navbar.Brand href="/" className="d-flex align-items-center">
         <img
           src="TechOverflowLogo.png"
@@ -30,7 +30,7 @@ const Navigation = () => {
   Articles
 </Nav.Link>
 
-          <Nav.Link href="#quizzes">Quizzes</Nav.Link>
+<Nav.Link as={Link} to="/quizzes">Quizzes</Nav.Link> 
           <Nav.Link href="#about">About</Nav.Link>
           <Nav.Link href="#contact">Contact</Nav.Link>
         </Nav>
