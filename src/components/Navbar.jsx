@@ -31,8 +31,9 @@ const Navigation = () => {
 </Nav.Link>
 
 <Nav.Link as={Link} to="/quizzes">Quizzes</Nav.Link> 
-          <Nav.Link href="#about">About</Nav.Link>
-          <Nav.Link href="#contact">Contact</Nav.Link>
+<Nav.Link as={Link} to="/about">About</Nav.Link>
+<Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+
         </Nav>
         {/* Right aligned buttons with spacing */}
         <div className="ml-auto">

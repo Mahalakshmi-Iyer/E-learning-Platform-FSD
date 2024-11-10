@@ -180,8 +180,8 @@ footer p {
 }
 
 .card img {
-  height: 100px;
-  object-fit: cover;
+  height: 250px;
+  object-fit: contain;
 }
 
 /* src/components/ArticlesPage.css */
@@ -236,3 +236,58 @@ footer p {
   font-size: 1rem;
 }
 
+/* App.css */
+
+.banner {
+  background-image: url('banner6.jpg'); /* Set your banner image here */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 400px; /* Adjust the height as needed */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  padding-left: 275px;
+}
+
+.banner-text {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: white;
+
+}
+
+.banner-subtext {
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* Ensure the text is centered and readable */
+.text-center {
+  text-align: center;
+}
+
+header {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+/* You can add more custom styles here */
+
+
+.social-links-list{
+  list-style: none;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.social-links-list i{
+  padding: 10px;
+}
+
+.uniform-img {
+  height: 300px;  
+}

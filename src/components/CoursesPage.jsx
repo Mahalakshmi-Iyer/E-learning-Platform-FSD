@@ -1,44 +1,43 @@
-// src/components/CoursesPage.jsx
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { Link } from 'react-router-dom'; 
 
 const courses = [
   {
     title: 'Introduction to Python',
     description: 'Learn the basics of Python programming.',
     image: 'py.png',
-    link: '/courses/python', // Python course page link
+    link: '/courses/python', 
   },
   {
     title: 'Web Development with React',
     description: 'Build dynamic websites using React.',
     image: 'react1.jpeg',
-    link: '/courses/react', // Placeholder link
+    link: '/courses/react', 
   },
   {
     title: 'Data Science with Python',
     description: 'Explore data science using Python libraries.',
     image: 'data.png',
-    link: '#', // Placeholder link
+    link: '#',
   },
   {
     title: 'Cloud Computing Essentials',
     description: 'Master the basics of cloud computing.',
     image: 'cloudFin.jpeg',
-    link: '#', // Placeholder link
+    link: '#',
   },
   {
     title: 'Mobile App Development',
     description: 'Learn to develop mobile applications.',
     image: 'android.jpeg',
-    link: '#', // Placeholder link
+    link: '#', 
   },
   {
     title: 'Machine Learning Basics',
     description: 'Get started with machine learning.',
     image: 'ml.png',
-    link: '#', // Placeholder link
+    link: '#', 
   },
 ];
 
