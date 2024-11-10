@@ -1,9 +1,10 @@
 // src/App.jsx
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, Link, useNavigate } from 'react-router-dom';
 
 import Navigation from './components/Navbar';
+import Signup from './components/SignupForm';
+import Login from './components/Login';
 import CoursesPage from './components/CoursesPage';
 import PythonCourse from './components/PythonCourse';
 import ReactCourse from './components/ReactCourse';
@@ -16,17 +17,32 @@ import About from './components/About';
 import Contact from './components/Contact';
 import './App.css';
 
-
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
 function App() {
+  // Set up a state to track if the user is logged in
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    // Check if the user is logged in using localStorage
+    const loggedInStatus = localStorage.getItem('isLoggedIn');
+    if (loggedInStatus === 'true') {
+      setIsLoggedIn(true);
+    }
+  }, []);
+
+  const handleLogout = () => {
+    // Handle logout by setting isLoggedIn to false and clearing localStorage
+    localStorage.setItem('isLoggedIn', 'false');
+    setIsLoggedIn(false);
+  };
+
   return (
     <Router>
       <Navigation />
       <Routes>
         <Route path="/" element={
           <>
-
             <div className="banner">
               <header className="text-center my-5">
                 <h1 className="banner-text">Let's make learning fun!</h1>
@@ -79,7 +95,6 @@ function App() {
               {/* Carousel */}
               <div id="carouselExample" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
-
                   {/* First Slide: Signup/Register */}
                   <div className="carousel-item active">
                     <div className="d-flex flex-column align-items-center">
@@ -91,7 +106,7 @@ function App() {
                       />
                       <h4>Sign Up to Get Started</h4>
                       <p>Create your account and get access to our powerful online IDE.</p>
-                      <Button variant="light">Register Now</Button>
+                      <Button variant="light" as={Link} to="/signup" disabled={isLoggedIn}>Register Now</Button>
                     </div>
                   </div>
 
@@ -106,7 +121,7 @@ function App() {
                       />
                       <h4>Explore Our Courses</h4>
                       <p>Choose from a wide range of courses and start learning today.</p>
-                      <Button variant="light" as={Link} to="/courses">View Courses</Button>
+                      <Button variant="light" as={Link} to="/courses" disabled={!isLoggedIn}>View Courses</Button>
                     </div>
                   </div>
 
@@ -121,26 +136,14 @@ function App() {
                       />
                       <h4>Articles & Quizzes</h4>
                       <p>Read insightful articles and test your knowledge with quizzes.</p>
-                      <Button variant="light" as={Link} to="/articles">Start Learning</Button>
+                      <Button variant="light" as={Link} to="/articles" disabled={!isLoggedIn}>Start Learning</Button>
                     </div>
                   </div>
 
                 </div>
-
-                {/* Carousel Controls */}
-                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                  <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span className="visually-hidden">Previous</span>
-                </button>
-                <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                  <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span className="visually-hidden">Next</span>
-                </button>
               </div>
             </section>
 
-
-            
             <Container>
               <section className="my-5">
                 <h2 className="text-center">Specialization Tracks</h2>
@@ -156,7 +159,7 @@ function App() {
                         style={{ height: '150px', objectFit: 'cover' }}
                       />
                       <p>Start learning about data science fundamentals.</p>
-                      <Button variant="primary">Start Learning</Button>
+                      <Button variant="primary" disabled={!isLoggedIn}>Start Learning</Button>
                     </div>
                   </Col>
                   <Col md={4}>
@@ -169,7 +172,7 @@ function App() {
                         style={{ height: '150px', objectFit: 'cover' }}
                       />
                       <p>Build your skills in mobile and web app development.</p>
-                      <Button variant="primary">Start Learning</Button>
+                      <Button variant="primary" disabled={!isLoggedIn}>Start Learning</Button>
                     </div>
                   </Col>
                   <Col md={4}>
@@ -182,16 +185,17 @@ function App() {
                         style={{ height: '150px', objectFit: 'cover' }}
                       />
                       <p>Master the cloud with our expert-led courses.</p>
-                      <Button variant="primary">Start Learning</Button>
+                      <Button variant="primary" disabled={!isLoggedIn}>Start Learning</Button>
                     </div>
                   </Col>
                 </Row>
               </section>
             </Container>
 
-
           </>
         }/>
+
+        {/* Routes for other components */}
         <Route path="/courses" element={<CoursesPage />} />
         <Route path="/courses/python" element={<PythonCourse />} />
         <Route path="/courses/react" element={<ReactCourse />} />
@@ -201,8 +205,18 @@ function App() {
         <Route path="/quizzes/python" element={<PythonQuiz />} /> 
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
+        <Route path="/signup" element={<Signup setIsLoggedIn={setIsLoggedIn} />} />
 
       </Routes>
+
+      {/* Display Profile Button if Logged In */}
+      {isLoggedIn && (
+        <div className="profile-button-container">
+          <Button onClick={handleLogout} variant="light">Logout</Button>
+        </div>
+      )}
+
       <Footer />
     </Router>
   );
