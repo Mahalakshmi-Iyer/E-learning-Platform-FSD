@@ -1,5 +1,5 @@
 // src/App.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
@@ -7,6 +7,7 @@ import Navigation from './components/Navbar';
 import CoursesPage from './components/CoursesPage';
 import PythonCourse from './components/PythonCourse';
 import ReactCourse from './components/ReactCourse';
+import DSwithPython from './components/DSwithPython'; // Import the new Data Science course component
 import ArticlesPage from './components/ArticlesPage';
 import UnderstandingDataStructures from './components/UnderstandingDataStructures';
 import QuizzesPage from './components/QuizzesPage';
@@ -17,9 +18,29 @@ import Contact from './components/Contact';
 import './App.css';
 
 
+import Dashboard from './components/Dashboard';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
 function App() {
+  // Sample user data for Dashboard
+  const [user] = useState({
+    name: "John Doe",
+    profile: "Learner at TechOverflow",
+    todos: ["Finish React course", "Take Python quiz", "Read latest article"],
+  });
+
+  // Manage enrolled courses in App
+  const [enrolledCourses, setEnrolledCourses] = useState([
+    "React Fundamentals", "Understanding Data Structures", "Python for Beginners",
+  ]);
+
+  // Function to add a course to the enrolled list
+  const handleEnrollCourse = (courseName) => {
+    if (!enrolledCourses.includes(courseName)) {
+      setEnrolledCourses([...enrolledCourses, courseName]);
+    }
+  };
+
   return (
     <Router>
       <Navigation />
@@ -156,7 +177,7 @@ function App() {
                         style={{ height: '150px', objectFit: 'cover' }}
                       />
                       <p>Start learning about data science fundamentals.</p>
-                      <Button variant="primary">Start Learning</Button>
+                      <Button variant="primary" onClick={() => handleEnrollCourse("Data Science with Python")}>Start Learning</Button>
                     </div>
                   </Col>
                   <Col md={4}>
@@ -169,7 +190,7 @@ function App() {
                         style={{ height: '150px', objectFit: 'cover' }}
                       />
                       <p>Build your skills in mobile and web app development.</p>
-                      <Button variant="primary">Start Learning</Button>
+                      <Button variant="primary" onClick={() => handleEnrollCourse("App Development with React")}>Start Learning</Button>
                     </div>
                   </Col>
                   <Col md={4}>
@@ -193,8 +214,19 @@ function App() {
           </>
         }/>
         <Route path="/courses" element={<CoursesPage />} />
-        <Route path="/courses/python" element={<PythonCourse />} />
-        <Route path="/courses/react" element={<ReactCourse />} />
+        <Route 
+          path="/courses/python" 
+          element={<PythonCourse onEnroll={handleEnrollCourse} />} 
+        />
+        <Route 
+          path="/courses/react" 
+          element={<ReactCourse onEnroll={handleEnrollCourse} />} 
+        />
+        <Route 
+          path="/courses/ds-with-python" 
+          element={<DSwithPython onEnroll={handleEnrollCourse} />} 
+        />  {/* Add route for DSwithPython */}
+        
         <Route path="/articles" element={<ArticlesPage />} /> 
         <Route path="/articles/data-structures" element={<UnderstandingDataStructures />} />
         <Route path="/quizzes" element={<QuizzesPage />} /> 
@@ -202,6 +234,11 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
 
+        <Route path="/quizzes/python" element={<PythonQuiz />} />
+        <Route 
+          path="/dashboard" 
+          element={<Dashboard user={user} enrolledCourses={enrolledCourses} />} 
+        /> {/* Pass enrolledCourses to Dashboard */}
       </Routes>
       <Footer />
     </Router>

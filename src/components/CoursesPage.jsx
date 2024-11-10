@@ -19,7 +19,7 @@ const courses = [
     title: 'Data Science with Python',
     description: 'Explore data science using Python libraries.',
     image: 'data.png',
-    link: '#',
+    link: '/courses/ds-with-python', // Updated the link to match the new route
   },
   {
     title: 'Cloud Computing Essentials',

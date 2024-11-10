@@ -1,8 +1,26 @@
 // src/components/PythonCourse.jsx
+
 import React from 'react';
 import { Container, Row, Col, Card, ListGroup, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';  // Import useNavigate for navigation
 
-const PythonCourse = () => {
+const PythonCourse = ({ enrollInCourse }) => {
+  const navigate = useNavigate();  // Initialize the navigate function for routing
+
+  const handleEnroll = () => {
+    const course = {
+      name: "Python for Beginners",
+      progress: 0,  // New course starts with 0% progress
+      slug: "python",
+    };
+
+    // Enroll the user in the course
+    enrollInCourse(course);
+
+    // Optionally, navigate to the dashboard or courses page
+    navigate("/");  // Navigate to the Dashboard
+  };
+
   return (
     <Container className="my-5">
       <h2 className="text-center mb-4">Introduction to Python</h2>
@@ -71,7 +89,6 @@ const PythonCourse = () => {
                   <p>Write functions and use modules to organize code effectively.</p>
                   <Button variant="outline-primary" size="sm">Start Lesson</Button>
                 </ListGroup.Item>
-                {/* Add more lessons as needed */}
               </ListGroup>
             </Card.Body>
           </Card>
@@ -81,7 +98,7 @@ const PythonCourse = () => {
       {/* Call to Action */}
       <Row className="text-center">
         <Col>
-          <Button variant="success" size="lg">Enroll Now</Button>
+          <Button variant="success" size="lg" onClick={handleEnroll}>Enroll Now</Button>
         </Col>
       </Row>
     </Container>

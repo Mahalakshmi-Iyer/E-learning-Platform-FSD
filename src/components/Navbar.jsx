@@ -1,11 +1,13 @@
+// src/components/Navbar.jsx
 import React from 'react';
-import { Navbar, Nav, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom'; 
+import { Navbar, Nav, Button, NavDropdown } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { FaUserCircle } from 'react-icons/fa'; // Import a user icon
 
 const Navigation = () => {
   return (
-    <Navbar bg="primary" variant="dark" expand="lg" fixed="top"> 
-      <Navbar.Brand href="/" className="d-flex align-items-center">
+    <Navbar bg="primary" variant="dark" expand="lg" fixed="top">
+      <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
         <img
           src="TechOverflowLogo.png"
           alt="logo"
@@ -17,7 +19,6 @@ const Navigation = () => {
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        {/* Center aligned navigation links */}
         <Nav className="mx-auto">
           <Nav.Link as={Link} to="/">
             Home
@@ -34,15 +35,19 @@ const Navigation = () => {
 <Nav.Link as={Link} to="/about">About</Nav.Link>
 <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
 
+        
         </Nav>
-        {/* Right aligned buttons with spacing */}
-        <div className="ml-auto">
-          <Button variant="outline-light" className="mr-3">
-            Sign In
-          </Button>
-          <Button variant="light" className="mr-4">
-            Register
-          </Button>
+        <div className="ml-auto d-flex align-items-center">
+          <Button variant="outline-light" className="mr-3">Sign In</Button>
+          <Button variant="light" className="mr-3">Register</Button>
+          <NavDropdown
+            title={<FaUserCircle size={28} className="text-white" />}
+            id="profile-dropdown"
+            align="end"
+          >
+            <NavDropdown.Item as={Link} to="/dashboard">Dashboard</NavDropdown.Item>
+            <NavDropdown.Item href="#logout">Logout</NavDropdown.Item>
+          </NavDropdown>
         </div>
       </Navbar.Collapse>
     </Navbar>

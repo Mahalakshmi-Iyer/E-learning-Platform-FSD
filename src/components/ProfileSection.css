@@ -1,0 +1,56 @@
+/* src/components/ProfileSection.css */
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+  }
+  
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-section h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+  }
+  
+  .profile-section p {
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+    margin: 8px 0 20px;
+  }
+  
+  .badges-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .badges-section h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .badge {
+    font-size: 1.5rem;
+    margin: 4px;
+  }
+  
+  .badge.gold { color: #FFD700; }
+  .badge.silver { color: #C0C0C0; }
+  .badge.bronze { color: #CD7F32; }
+  

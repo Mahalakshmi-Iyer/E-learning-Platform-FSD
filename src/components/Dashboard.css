@@ -1,0 +1,69 @@
+.dashboard {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.left-column,
+.middle-column,
+.right-column {
+  flex: 1;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 8px;
+}
+
+.middle-column {
+  /* Make the middle section slightly larger */
+  flex: 2;
+}
+
+/* Quote Section */
+.quote-section {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: #000f31;
+  margin-bottom: 1rem;
+}
+
+/* To-Do List Section */
+.todo-input {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.todo-input input {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.todo-input button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.right-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.right-column li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.right-column input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.completed span {
+  text-decoration: line-through;
+  color: gray;
+}

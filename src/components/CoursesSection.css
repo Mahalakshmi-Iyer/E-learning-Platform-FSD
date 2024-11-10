@@ -1,0 +1,61 @@
+/* src/components/CoursesSection.css */
+
+.courses-section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .courses-section h3 {
+    font-size: 1.5rem;
+    color: #233852;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .course-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .course-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .course-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .progress-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  progress {
+    width: 100%;
+    height: 20px;
+    border-radius: 5px;
+  }
+  
+  .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  

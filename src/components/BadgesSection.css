@@ -1,0 +1,55 @@
+/* src/components/BadgesSection.css */
+
+.badges-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .badges-section h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .badges-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .badge {
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .badge.gold {
+    color: #FFD700;
+    background-color: rgba(255, 215, 0, 0.1);
+  }
+  
+  .badge.silver {
+    color: #C0C0C0;
+    background-color: rgba(192, 192, 192, 0.1);
+  }
+  
+  .badge.bronze {
+    color: #CD7F32;
+    background-color: rgba(205, 127, 50, 0.1);
+  }
+  
