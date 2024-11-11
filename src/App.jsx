@@ -8,6 +8,9 @@ import CoursesPage from './components/CoursesPage';
 import PythonCourse from './components/PythonCourse';
 import ReactCourse from './components/ReactCourse';
 import DSwithPython from './components/DSwithPython'; // Import the new Data Science course component
+import CloudComputingCourse from './components/CloudComputingCourse';
+import MobileAppDevelopmentCourse from './components/MobileAppDevelopmentCourse';
+import MachineLearningCourse from './components/MachineLearningCourse';
 import ArticlesPage from './components/ArticlesPage';
 import UnderstandingDataStructures from './components/UnderstandingDataStructures';
 import QuizzesPage from './components/QuizzesPage';
@@ -226,6 +229,19 @@ function App() {
           path="/courses/ds-with-python" 
           element={<DSwithPython onEnroll={handleEnrollCourse} />} 
         />  {/* Add route for DSwithPython */}
+
+<Route 
+          path="/courses/cloud-computing" 
+          element={<CloudComputingCourse onEnroll={handleEnrollCourse} />}  // Cloud Computing course route
+        />
+        <Route 
+          path="/courses/mobile-app-development" 
+          element={<MobileAppDevelopmentCourse onEnroll={handleEnrollCourse} />}  // Mobile App Development course route
+        />
+        <Route 
+          path="/courses/machine-learning" 
+          element={<MachineLearningCourse onEnroll={handleEnrollCourse} />}  // Machine Learning course route
+        />
         
         <Route path="/articles" element={<ArticlesPage />} /> 
         <Route path="/articles/data-structures" element={<UnderstandingDataStructures />} />

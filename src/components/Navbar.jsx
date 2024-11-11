@@ -2,7 +2,7 @@
 import React from 'react';
 import { Navbar, Nav, Button, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { FaUserCircle } from 'react-icons/fa'; // Import a user icon
+import { FaUserCircle } from 'react-icons/fa'; 
 
 const Navigation = () => {
   return (

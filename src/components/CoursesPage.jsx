@@ -25,19 +25,19 @@ const courses = [
     title: 'Cloud Computing Essentials',
     description: 'Master the basics of cloud computing.',
     image: 'cloudFin.jpeg',
-    link: '#',
+    link: '/courses/cloud-computing', // Corrected the link
   },
   {
     title: 'Mobile App Development',
     description: 'Learn to develop mobile applications.',
     image: 'android.jpeg',
-    link: '#', 
+    link: '/courses/mobile-app-development', // Corrected the link
   },
   {
     title: 'Machine Learning Basics',
     description: 'Get started with machine learning.',
     image: 'ml.png',
-    link: '#', 
+    link: '/courses/machine-learning', // Corrected the link
   },
 ];
 

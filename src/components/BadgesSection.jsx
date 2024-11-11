@@ -6,7 +6,8 @@ const BadgesSection = ({ badges }) => (
     <h3>Badges Earned</h3>
     <div className="badge-list">
       {badges.map((badge, index) => (
-        <span key={index} className={`badge badge-${badge.color}`}>
+        <span key={index} className="badge">
+
           ★
         </span>
       ))}
