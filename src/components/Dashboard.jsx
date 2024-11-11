@@ -10,19 +10,17 @@ const Dashboard = () => {
   const [user] = useState({
     name: "John Doe",
     profile: "Learner at TechOverflow",
-    profilePicture: "profile.jpg",  // Make sure to provide the correct path to your profile image
+    profilePicture: "profile.jpg", 
   });
 
-  // Badges state (adjust according to how you want the badges displayed)
   const [badges] = useState([
     { color: 'gold' },
     { color: 'silver' },
     { color: 'bronze' },
   ]);
 
-  // Enrolled courses state with progress
   const [enrolledCourses] = useState([
-    { name: "React Fundamentals", progress: 80, slug: "react" },  // Add slug for routing
+    { name: "React Fundamentals", progress: 80, slug: "react" },  // slug for routing
     { name: "Python for Beginners", progress: 60, slug: "python" },
   ]);
 
@@ -33,7 +31,6 @@ const Dashboard = () => {
     "Read the latest article",
   ]);
 
-  // Function to add new todo
   const addTodo = (todo) => setTodos([...todos, todo]);
 
   return (
@@ -47,7 +44,7 @@ const Dashboard = () => {
         <CoursesSection enrolledCourses={enrolledCourses} />
       </div>
 
-      {/* Right Section with Quote and To-Do List */}
+      
       <div className="right-column">
         <div className="quote-section">
           <p>"The journey of a thousand lines begins with a single character."</p>

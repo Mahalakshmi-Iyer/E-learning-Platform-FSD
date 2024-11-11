@@ -7,7 +7,7 @@ import Navigation from './components/Navbar';
 import CoursesPage from './components/CoursesPage';
 import PythonCourse from './components/PythonCourse';
 import ReactCourse from './components/ReactCourse';
-import DSwithPython from './components/DSwithPython'; // Import the new Data Science course component
+import DSwithPython from './components/DSwithPython'; 
 import CloudComputingCourse from './components/CloudComputingCourse';
 import MobileAppDevelopmentCourse from './components/MobileAppDevelopmentCourse';
 import MachineLearningCourse from './components/MachineLearningCourse';
@@ -25,19 +25,18 @@ import Dashboard from './components/Dashboard';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
 function App() {
-  // Sample user data for Dashboard
+  
   const [user] = useState({
     name: "John Doe",
     profile: "Learner at TechOverflow",
     todos: ["Finish React course", "Take Python quiz", "Read latest article"],
   });
 
-  // Manage enrolled courses in App
+
   const [enrolledCourses, setEnrolledCourses] = useState([
     "React Fundamentals", "Understanding Data Structures", "Python for Beginners",
   ]);
 
-  // Function to add a course to the enrolled list
   const handleEnrollCourse = (courseName) => {
     if (!enrolledCourses.includes(courseName)) {
       setEnrolledCourses([...enrolledCourses, courseName]);
@@ -100,7 +99,7 @@ function App() {
             </Container>
 
             <section className="bg-secondary text-white text-center py-5">
-              {/* Carousel */}
+              
               <div id="carouselExample" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
 
@@ -254,7 +253,7 @@ function App() {
         <Route 
           path="/dashboard" 
           element={<Dashboard user={user} enrolledCourses={enrolledCourses} />} 
-        /> {/* Pass enrolledCourses to Dashboard */}
+        /> 
       </Routes>
       <Footer />
     </Router>

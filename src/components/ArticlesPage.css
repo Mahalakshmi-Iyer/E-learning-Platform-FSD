@@ -7,9 +7,8 @@
     transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transition effect */
   }
   
-  /* Hover effect */
   .article-box:hover {
-    background-color: #e0ebfa; /* Light cyan background on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    background-color: #e0ebfa; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   

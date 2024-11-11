@@ -2,23 +2,23 @@
 
 import React from 'react';
 import { Container, Row, Col, Card, ListGroup, Button } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';  // Import useNavigate for navigation
+import { useNavigate } from 'react-router-dom';  
 
 const CloudComputingCourse = ({ enrollInCourse }) => {
-  const navigate = useNavigate();  // Initialize the navigate function for routing
+  const navigate = useNavigate();  
 
   const handleEnroll = () => {
     const course = {
       name: "Cloud Computing Essentials",
-      progress: 0,  // New course starts with 0% progress
+      progress: 0,  
       slug: "cloud-computing",
     };
 
-    // Enroll the user in the course
+
     enrollInCourse(course);
 
-    // Optionally, navigate to the dashboard or courses page
-    navigate("/");  // Navigate to the Dashboard
+  
+    navigate("/");  
   };
 
   return (
@@ -40,7 +40,7 @@ const CloudComputingCourse = ({ enrollInCourse }) => {
         </Col>
         <Col md={4}>
           <Card className="shadow-sm">
-            <Card.Img variant="top" src="/cloud-computing.png" alt="Cloud Computing Course"/>
+            <Card.Img variant="top" src="/cloudFin.jpeg" alt="Cloud Computing Course"/>
           </Card>
         </Col>
       </Row>

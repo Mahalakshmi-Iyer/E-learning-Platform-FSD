@@ -1,7 +1,7 @@
 // src/components/UnderstandingDataStructures.jsx
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import './UnderstandingDataStructures.css'; // Importing custom CSS file
+import './UnderstandingDataStructures.css'; 
 
 const UnderstandingDataStructures = () => {
   return (

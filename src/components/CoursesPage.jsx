@@ -19,25 +19,25 @@ const courses = [
     title: 'Data Science with Python',
     description: 'Explore data science using Python libraries.',
     image: 'data.png',
-    link: '/courses/ds-with-python', // Updated the link to match the new route
+    link: '/courses/ds-with-python', 
   },
   {
     title: 'Cloud Computing Essentials',
     description: 'Master the basics of cloud computing.',
     image: 'cloudFin.jpeg',
-    link: '/courses/cloud-computing', // Corrected the link
+    link: '/courses/cloud-computing', 
   },
   {
     title: 'Mobile App Development',
     description: 'Learn to develop mobile applications.',
-    image: 'android.jpeg',
-    link: '/courses/mobile-app-development', // Corrected the link
+    image: 'android-logo.png',
+    link: '/courses/mobile-app-development',
   },
   {
     title: 'Machine Learning Basics',
     description: 'Get started with machine learning.',
     image: 'ml.png',
-    link: '/courses/machine-learning', // Corrected the link
+    link: '/courses/machine-learning', 
   },
 ];
 

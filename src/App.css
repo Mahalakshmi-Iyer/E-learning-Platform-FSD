@@ -195,11 +195,11 @@ footer p {
 
 /* Hover effect */
 .article-box:hover {
-  background-color: #e0f7fa; /* Light cyan background on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  background-color: #e0f7fa; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
-/* Optional: src/App.css */
+
 .card:hover {
   background-color: #f8f9fa;
   cursor: pointer;
@@ -239,11 +239,11 @@ footer p {
 /* App.css */
 
 .banner {
-  background-image: url('banner6.jpg'); /* Set your banner image here */
+  background-image: url('banner6.jpg'); 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 400px; /* Adjust the height as needed */
+  height: 400px; 
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -264,7 +264,7 @@ footer p {
   color: white;
 }
 
-/* Ensure the text is centered and readable */
+
 .text-center {
   text-align: center;
 }
@@ -274,7 +274,6 @@ header {
   background-color: rgba(255, 255, 255, 0);
 }
 
-/* You can add more custom styles here */
 
 
 .social-links-list{

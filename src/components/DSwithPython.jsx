@@ -2,23 +2,21 @@
 
 import React from 'react';
 import { Container, Row, Col, Card, ListGroup, Button } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';  // Import useNavigate for navigation
+import { useNavigate } from 'react-router-dom';  
 
 const DSwithPython = ({ enrollInCourse }) => {
-  const navigate = useNavigate();  // Initialize the navigate function for routing
+  const navigate = useNavigate();  
 
   const handleEnroll = () => {
     const course = {
       name: "Data Science with Python",
-      progress: 0,  // New course starts with 0% progress
+      progress: 0,  
       slug: "data-science-python",
     };
 
-    // Enroll the user in the course
     enrollInCourse(course);
 
-    // Optionally, navigate to the dashboard or courses page
-    navigate("/");  // Navigate to the Dashboard
+    navigate("/"); 
   };
 
   return (
@@ -40,7 +38,7 @@ const DSwithPython = ({ enrollInCourse }) => {
         </Col>
         <Col md={4}>
           <Card className="shadow-sm">
-            <Card.Img variant="top" src="/ds-python.png" alt="Data Science with Python Course"/>
+            <Card.Img variant="top" src="/data.png" alt="Data Science with Python Course"/>
           </Card>
         </Col>
       </Row>
@@ -100,7 +98,7 @@ const DSwithPython = ({ enrollInCourse }) => {
         </Col>
       </Row>
 
-      {/* Call to Action */}
+  
       <Row className="text-center">
         <Col>
           <Button variant="success" size="lg" onClick={handleEnroll}>Enroll Now</Button>

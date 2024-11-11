@@ -1,8 +1,8 @@
 /* Footer */
 .footer {
-    background-color: #333; /* Dark grey background color */
+    background-color: #333; 
     padding: 40px 20px;
-    color: white; /* White text color */
+    color: white; 
   }
   
   .footer .footer-container {
@@ -19,15 +19,15 @@
   }
 
   .footer-column h4 {
-    margin-bottom: 10px; /* Space below headings */
+    margin-bottom: 10px; 
   }
   
   .footer-column a {
-    display: block; /* Each link occupies a full line */
-    color: #90E0EF; /* Link color */
-    text-decoration: none; /* Remove underline */
-    margin: 5px 0; /* Space between links */
-    transition: color 0.3s ease; /* Smooth color transition */
+    display: block; 
+    color: #90E0EF; 
+    text-decoration: none; 
+    margin: 5px 0;
+    transition: color 0.3s ease;
   }
   
   .footer .site-info {
@@ -36,19 +36,19 @@
   
   .footer h4 {
     font-size: 1.2rem;
-    color: #00B4D8; /* Hints of blue for headings */
+    color: #00B4D8; 
     margin-bottom: 20px;
   }
   
   .footer p, .footer a {
-    color: white; /* White text for paragraphs and links */
+    color: white; 
     font-size: 0.9rem;
     margin-bottom: 10px;
     text-decoration: none;
   }
   
   .footer a:hover {
-    color: #90E0EF; /* Lighter blue for hover effect on links */
+    color: #90E0EF; 
   }
   
   .footer .footer-logo {
@@ -63,15 +63,15 @@
   }
   
   .footer .social-icons a {
-    background-color: #0077B6; /* Blue for social icons */
-    color: white; /* White text for social icons */
+    background-color: #0077B6; 
+    color: white; 
     padding: 10px;
     border-radius: 50%;
     transition: background-color 0.3s ease;
   }
   
   .footer .social-icons a:hover {
-    background-color: #00A896; /* Hover color for social icons */
+    background-color: #00A896; 
   }
   
   .footer .footer-bottom {
@@ -79,7 +79,7 @@
     padding-top: 20px;
     text-align: center;
     font-size: 0.8rem;
-    border-top: 1px solid #555; /* Darker grey for the border */
-    color: white; /* White color for copyright text */
+    border-top: 1px solid #555; 
+    color: white; 
   }
   

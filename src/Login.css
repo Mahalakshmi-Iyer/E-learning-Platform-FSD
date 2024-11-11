@@ -1,6 +1,6 @@
 /* Login and Register form styling */
 .login-container {
-    background-color: #CAF0F8; /* Light blue background */
+    background-color: #CAF0F8; 
     padding: 50px;
     max-width: 450px;
     margin: 100px auto;
@@ -9,7 +9,7 @@
 }
 
 .login-container h2 {
-    color: #03045E; /* Dark blue heading */
+    color: #03045E;
     text-align: center;
     margin-bottom: 30px;
     font-size: 1.8rem;
@@ -39,7 +39,7 @@
 }
 
 .login-container .btn-primary {
-    background-color: #0077B6; /* Primary blue for buttons */
+    background-color: #0077B6; 
     border: none;
     padding: 12px 25px;
     font-size: 1.1rem;
@@ -48,7 +48,7 @@
 }
 
 .login-container .btn-primary:hover {
-    background-color: #03045E; /* Darker blue for hover */
+    background-color: #03045E;
 }
 
 .login-container .login-footer {

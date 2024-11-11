@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './TodoListSection.css';
 
 const TodoListSection = () => {
-  // Retrieve tasks from localStorage or set to an empty array
   const [todos, setTodos] = useState(() => {
     const savedTodos = localStorage.getItem('todos');
     return savedTodos ? JSON.parse(savedTodos) : [];
@@ -10,7 +9,6 @@ const TodoListSection = () => {
   
   const [newTodo, setNewTodo] = useState('');
 
-  // Update localStorage whenever tasks change
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos));
   }, [todos]);
@@ -26,7 +24,6 @@ const TodoListSection = () => {
     const updatedTodos = [...todos];
     updatedTodos[index].completed = !updatedTodos[index].completed;
 
-    // Remove the task if it is completed
     if (updatedTodos[index].completed) {
       updatedTodos.splice(index, 1);
     }

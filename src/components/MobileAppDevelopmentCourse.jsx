@@ -2,23 +2,23 @@
 
 import React from 'react';
 import { Container, Row, Col, Card, ListGroup, Button } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';  // Import useNavigate for navigation
+import { useNavigate } from 'react-router-dom';  
 
 const MobileAppDevelopmentCourse = ({ enrollInCourse }) => {
-  const navigate = useNavigate();  // Initialize the navigate function for routing
+  const navigate = useNavigate(); 
 
   const handleEnroll = () => {
     const course = {
       name: "Mobile App Development",
-      progress: 0,  // New course starts with 0% progress
+      progress: 0,  
       slug: "mobile-app-development",
     };
 
-    // Enroll the user in the course
+  
     enrollInCourse(course);
 
-    // Optionally, navigate to the dashboard or courses page
-    navigate("/");  // Navigate to the Dashboard
+    
+    navigate("/");  
   };
 
   return (
@@ -40,7 +40,7 @@ const MobileAppDevelopmentCourse = ({ enrollInCourse }) => {
         </Col>
         <Col md={4}>
           <Card className="shadow-sm">
-            <Card.Img variant="top" src="/mobile-app.png" alt="Mobile App Development"/>
+            <Card.Img variant="top" src="/android-logo.png" alt="Mobile App Development"/>
           </Card>
         </Col>
       </Row>

@@ -1,7 +1,7 @@
 // src/components/CoursesSection.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './CoursesSection.css';  // Add CSS styling here
+import './CoursesSection.css'; 
 
 const CoursesSection = ({ enrolledCourses }) => {
   return (

@@ -1,14 +1,14 @@
 // src/components/ArticlesPage.jsx
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-import './ArticlesPage.css'; // Import custom CSS for hover effect
+import { Link } from 'react-router-dom';
+import './ArticlesPage.css'; 
 
 const articles = [
   {
     title: 'Understanding Data Structures',
     description: 'A comprehensive guide to data structures in computer science.',
-    link: '/articles/data-structures', // Add links to each article
+    link: '/articles/data-structures', 
   },
   {
     title: 'Introduction to Algorithms',

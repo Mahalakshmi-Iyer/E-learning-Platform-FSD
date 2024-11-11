@@ -2,23 +2,22 @@
 
 import React from 'react';
 import { Container, Row, Col, Card, ListGroup, Button } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';  // Import useNavigate for navigation
+import { useNavigate } from 'react-router-dom';  
 
 const PythonCourse = ({ enrollInCourse }) => {
-  const navigate = useNavigate();  // Initialize the navigate function for routing
+  const navigate = useNavigate();  
 
   const handleEnroll = () => {
     const course = {
       name: "Python for Beginners",
-      progress: 0,  // New course starts with 0% progress
+      progress: 0,  
       slug: "python",
     };
 
-    // Enroll the user in the course
     enrollInCourse(course);
 
-    // Optionally, navigate to the dashboard or courses page
-    navigate("/");  // Navigate to the Dashboard
+   
+    navigate("/");  
   };
 
   return (
