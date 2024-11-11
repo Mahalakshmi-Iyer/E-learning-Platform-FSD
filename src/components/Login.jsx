@@ -1,13 +1,14 @@
-// Login.jsx
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Container, Form, Button, Row, Col, Card, Alert } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
-const Login = () => {
+const Login = ({ setIsLoggedIn }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,6 +28,13 @@ const Login = () => {
 
       // Store the token in localStorage
       localStorage.setItem('token', response.data.token);
+      localStorage.setItem('isLoggedIn', 'true'); // Persist login status
+
+      // Update isLoggedIn in the parent component
+      setIsLoggedIn(true);
+
+      // Redirect to home or dashboard
+      navigate('/');
     } catch (error) {
       setError(error.response?.data?.message || "An error occurred. Please try again.");
     }

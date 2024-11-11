@@ -2,16 +2,16 @@ import React from 'react';
 import { Navbar, Nav, Button, Dropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const Navigation = ({ isLoggedIn, handleLogout }) => {
+const Navigation = ({ isLoggedIn, handleLogout = () => {} }) => {
   return (
     <Navbar bg="primary" variant="dark" expand="lg" fixed="top">
-      <Navbar.Brand href="/" className="d-flex align-items-center">
+      <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
         <img
           src="TechOverflowLogo.png"
           alt="logo"
           width="30"
           height="30"
-          className="d-inline-block align-top mr-3"
+          className="d-inline-block align-top me-3"
         />
         TechOverflow
       </Navbar.Brand>
@@ -25,13 +25,13 @@ const Navigation = ({ isLoggedIn, handleLogout }) => {
           <Nav.Link as={Link} to="/about">About</Nav.Link>
           <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
         </Nav>
-        <div className="ml-auto">
+        <div className="ms-auto">
           {isLoggedIn ? (
             <Dropdown align="end">
               <Dropdown.Toggle variant="light" id="profile-dropdown">
-                <FontAwesomeIcon icon={faUser} /> Profile
+                <i className="fa fa-user"></i> Profile {/* Using Font Awesome icon directly */}
               </Dropdown.Toggle>
-              <Dropdown.Menu>
+              <Dropdown.Menu align="end">
                 <Dropdown.Item as={Link} to="/profile">Profile</Dropdown.Item>
                 <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>
               </Dropdown.Menu>
@@ -39,10 +39,10 @@ const Navigation = ({ isLoggedIn, handleLogout }) => {
           ) : (
             <>
               <Link to="/login">
-                <Button variant="outline-light" className="mr-3">Sign In</Button>
+                <Button variant="outline-light" className="me-3">Sign In</Button>
               </Link>
               <Link to="/signup">
-                <Button variant="light" className="mr-4">Register</Button>
+                <Button variant="light" className="me-4">Register</Button>
               </Link>
             </>
           )}
